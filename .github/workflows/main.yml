@@ -41,10 +41,10 @@ jobs:
           gradle-version: '8.9'
 
       - name: Build neyKu APK
-        run: gradle --no-daemon assembleDebug
+        run: gradle --no-daemon -p neyKu assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: neyKu-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: neyKu/app/build/outputs/apk/debug/app-debug.apk
